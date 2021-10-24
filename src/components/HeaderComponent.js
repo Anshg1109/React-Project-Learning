@@ -6,11 +6,10 @@ class Header extends Component {
 
   constructor(props) {
     super(props);
-
-    this.toggleNav = this.toggleNav.bind(this);
     this.state = {
       isNavOpen: false
     };
+    this.toggleNav = this.toggleNav.bind(this);
   }
 
   toggleNav() {
@@ -22,7 +21,7 @@ class Header extends Component {
 
   render() {
     return(
-      <div>
+      <React.Fragment>
       <Navbar dark expand="md">
           <div className="container">
               <NavbarToggler onClick={this.toggleNav} />
@@ -55,7 +54,7 @@ class Header extends Component {
               </div>
           </div>
       </Jumbotron>
-  </div>
+  </React.Fragment>
     );
   }
 }
